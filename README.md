@@ -13,20 +13,21 @@ A personalized movie recommendation system built with Python, pandas, scikit-lea
 ## Project structure
 
 ```text
-Movie- prediction/
+MovieMate/
 ├── app.py
+├── assets/
+│   └── ayush_tiwari.jpg
 ├── data/
-│   ├── raw/
-│   │   └── TMDB_movie_dataset_v11.csv
 │   └── processed/
 │       └── cleaned_movies.csv
-├── models/
 ├── notebooks/
 ├── src/
 │   ├── data_cleaning.py
 │   ├── feature_engineering.py
 │   ├── recommender.py
 │   └── utils.py
+├── tests/
+│   └── test_recommender.py
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -38,6 +39,12 @@ Movie- prediction/
 python -m pip install -r requirements.txt
 streamlit run app.py
 ```
+
+The cleaned dataset is included in the repository. The original raw dataset is not included because of its size. Recommendation model files are generated locally from the cleaned dataset when recommendations are requested.
+
+## Deploy
+
+This app can be deployed from this repository with Streamlit Community Cloud by selecting `app.py` as the app entry point. The dependencies are listed in `requirements.txt`.
 
 ## Data source
 
